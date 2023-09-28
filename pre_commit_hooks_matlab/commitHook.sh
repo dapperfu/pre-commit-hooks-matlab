@@ -14,11 +14,12 @@ get_pattern_files() {
 # Get all changed python files
 M_FILES=$(get_pattern_files .m)
 
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+
+echo SCRIPT_DIR=$SCRIPT_DIR
+echo PWD=$PWD
+
 if [[ -n "$M_FILES" ]]
 then
     echo $M_FILES
 fi
-
-for file in "$@"; do
-  echo "./$(dirname "$file")"
-done
