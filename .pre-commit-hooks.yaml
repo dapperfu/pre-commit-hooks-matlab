@@ -1,7 +1,5 @@
--   repo: https://github.com/dapperfu/pre-commit-hooks-matlab
-    rev: main  # Replace with the desired version or commit hash
-    hooks:
-    -   id: close_simulink_subsystems
-        name: Close Simulink Subsystems
-        entry: close_simulink_subsystems
-        language: system
+- id: commitHook
+  name: commitHook
+  entry: commitHook
+  description: Example shell script commit hook
+  language: system
