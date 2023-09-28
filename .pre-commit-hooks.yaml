@@ -1,5 +1,5 @@
 - id: commitHook
   name: commitHook
-  entry: commitHook
+  entry: commitHook.sh
   description: Example shell script commit hook
   language: system
