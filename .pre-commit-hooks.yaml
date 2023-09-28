@@ -3,3 +3,8 @@
   entry: commitHook.sh
   description: Example shell script commit hook
   language: system
+- id: close_simulink_subsystems
+  name: close_simulink_subsystems
+  entry: close_simulink_subsystems
+  description: Example Python hook
+  language: python
