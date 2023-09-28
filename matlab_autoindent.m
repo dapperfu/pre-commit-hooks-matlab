@@ -1,4 +1,5 @@
-# ChatGPT: Write a MATLAB script to automate opening a matlab file using the editor (doc matlab.desktop.editor). Use the appropriate function to auto indent (Ctrl-I).
+% ChatGPT: Write a MATLAB script to automate opening a matlab file using the editor (doc matlab.desktop.editor). Use the appropriate function to auto indent (Ctrl-I).
+% This lead to finding https://github.com/okomarov/TidyCode.
 
 % Define the file path
 fileToOpen = 'path/to/your/matlab/file.m';
