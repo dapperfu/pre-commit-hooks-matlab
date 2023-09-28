@@ -13,7 +13,7 @@
   entry: close_simulink_subsystems
   description: Example Python hook
   language: python
-  files: \.((slx)|(mdl))$
+  files: \.(slx|mdl)$
 - id: matlab_smart_indent
   name: matlab_smart_indent
   entry: matlab_smart_indent

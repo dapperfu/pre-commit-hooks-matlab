@@ -19,7 +19,7 @@ addpath('{os.path.dirname(os.path.realpath(__file__))}');
 run('matlab_smart_indent');
 """, file=fid)
 
-    # subprocess.run(["matlab", "-batch", "run_matlab_smart_indent"])
+    subprocess.run(["matlab", "-wait", "-r", "run_matlab_smart_indent"])
 
     if not DEBUG:
         os.unlink("mfiles.txt")

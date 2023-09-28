@@ -8,7 +8,7 @@ DEBUG=True
 def main(argv: List[str] = sys.argv):
     with open("models.txt", "w") as fid:
         for mfile in argv[1:]:
-            full_path = os.path.abspath(os.getcwd(), mfile);
+            full_path = os.path.abspath(mfile);
             print(full_path, file=fid)
 
     with open('run_matlab_smart_indent.m', "w") as fid:
