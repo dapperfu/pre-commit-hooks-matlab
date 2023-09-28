@@ -8,4 +8,5 @@ repos:
     rev: master
     hooks:
       - id: matlab
-        scripts: [matlab_autoindent]```
+        scripts: [matlab_autoindent]
+```
