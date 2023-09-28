@@ -1,8 +1,8 @@
 - id: commitHook
   name: commitHook
-  entry: ./commitHook.sh
+  entry: pre_commit_hooks_matlab/commitHook.sh
   description: Example shell script commit hook
-  language: system
+  language: script
 - id: close_simulink_subsystems
   name: close_simulink_subsystems
   entry: close_simulink_subsystems
