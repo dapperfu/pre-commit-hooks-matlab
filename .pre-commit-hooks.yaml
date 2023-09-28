@@ -3,6 +3,11 @@
   entry: pre_commit_hooks_matlab/commitHook.sh
   description: Example shell script commit hook
   language: script
+- id: commitHook2
+  name: commitHook2
+  entry: pre_commit_hooks_matlab/commitHook.bat
+  description: Example shell script commit hook
+  language: system
 - id: close_simulink_subsystems
   name: close_simulink_subsystems
   entry: close_simulink_subsystems
