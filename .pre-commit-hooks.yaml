@@ -1,6 +1,6 @@
 - id: commitHook
   name: commitHook
-  entry: commitHook.sh
+  entry: ./commitHook.sh
   description: Example shell script commit hook
   language: system
 - id: close_simulink_subsystems
