@@ -1,3 +1,10 @@
-function matlab_smart_indent()
+function close_simulink_subsystems()
+%%
+fid = fopen('models.txt', 'r');
 
-fprintf(1, "pwd: %s\n", pwd)
+while ~feof(fid)
+    line = fgetl(fid);
+    [path, filename, ~] = fileparts(line);
+    addpath(path);
+    closeSubSystems(filename)
+end
