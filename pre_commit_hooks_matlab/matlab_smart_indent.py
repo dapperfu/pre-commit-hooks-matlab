@@ -14,6 +14,9 @@ def main(argv: List[str] = sys.argv):
     with open('run_matlab_smart_indent.m', "w") as fid:
         print(f"""
 cd '{os.getcwd()}';
+addpath('{os.path.dirname(os.path.realpath(__file__))}');
+
+run('matlab_smart_indent');
 """, file=fid)
 
     subprocess.run(["matlab", "-batch", "run_matlab_smart_indent"])
