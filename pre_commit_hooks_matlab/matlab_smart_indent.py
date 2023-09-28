@@ -17,6 +17,7 @@ cd '{os.getcwd()}';
 addpath('{os.path.dirname(os.path.realpath(__file__))}');
 
 run('matlab_smart_indent');
+exit;
 """, file=fid)
 
     subprocess.run(["matlab", "-wait", "-r", "run_matlab_smart_indent"])

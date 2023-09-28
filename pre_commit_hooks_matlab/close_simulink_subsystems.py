@@ -17,6 +17,7 @@ cd '{os.getcwd()}';
 addpath('{os.path.dirname(os.path.realpath(__file__))}');
 
 run('close_simulink_subsystems');
+exit;
 """, file=fid)
 
     # subprocess.run(["matlab", "-batch", "run_close_simulink_subsystems"])
