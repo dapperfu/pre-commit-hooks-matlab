@@ -17,12 +17,13 @@ cd '{os.getcwd()}';
 """, file=fid)
 
     subprocess.run(["matlab", "-batch", "run_matlab_smart_indent"])
-    print(argv)
-    print(os.path.dirname(os.path.realpath(__file__)))
 
     if not DEBUG:
         os.unlink("mfiles.txt")
         os.unlink("run_matlab_smart_indent.m")
+
+    print(f"argv: {argv}")
+    print(f"script path: {os.path.dirname(os.path.realpath(__file__))}")
 
 if __name__ == "__main__":
     main()
