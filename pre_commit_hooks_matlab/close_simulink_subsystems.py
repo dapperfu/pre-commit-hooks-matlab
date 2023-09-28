@@ -11,9 +11,12 @@ def main(argv: List[str] = sys.argv):
             full_path = os.path.abspath(os.getcwd(), mfile);
             print(full_path, file=fid)
 
-    with open('run_close_simulink_subsystems.m', "w") as fid:
+    with open('run_matlab_smart_indent.m', "w") as fid:
         print(f"""
 cd '{os.getcwd()}';
+addpath('{os.path.dirname(os.path.realpath(__file__))}');
+
+run('close_simulink_subsystems');
 """, file=fid)
 
     subprocess.run(["matlab", "-batch", "run_close_simulink_subsystems"])
