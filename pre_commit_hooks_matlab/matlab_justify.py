@@ -3,10 +3,7 @@ import subprocess
 import sys
 from pathlib import Path
 from typing import List
-
-
-# Debugging.
-DEBUG = True
+from . import DEBUG
 # Setup.
 fileList = "mfiles.txt"
 moduleDir = os.path.dirname(os.path.realpath(__file__))
