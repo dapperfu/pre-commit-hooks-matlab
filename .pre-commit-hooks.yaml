@@ -8,15 +8,33 @@
 #  entry: commitHook.bat
 #  description: Example shell script commit hook
 #  language: system
-- id: close_simulink_subsystems
-  name: close_simulink_subsystems
-  entry: close_simulink_subsystems
-  description: Example Python hook
+- id: simulink_close_subsystems
+  name: simulink_close_subsystems
+  entry: simulink_close_subsystems
+  description: Close Simulink Subsystems
   language: python
+  types: [file]
   files: \.(slx|mdl)$
+  args: []
+- id: simulink_zoom_subsystems
+  name: simulink_zoom_subsystems
+  entry: simulink_zoom_subsystems
+  description: Zoom Simulink Subsystems to fit Simulink
+  language: python
+  types: [file]
+  files: \.(slx|mdl)$
+  args: []
 - id: matlab_smart_indent
   name: matlab_smart_indent
   entry: matlab_smart_indent
-  description: MATLAB Smart Indent
+  description: MATLAB Smart Indent from TidyCode
   language: python
   files: \.m$
+  args: []
+- id: matlab_justify
+  name: matlab_justify
+  entry: matlab_justify
+  description: MATLAB justify from TidyCode
+  language: python
+  files: \.m$
+  args: []

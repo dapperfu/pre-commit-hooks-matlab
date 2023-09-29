@@ -1,4 +1,4 @@
-function closeSubSystems(system)
+function closedSubsystems = closeSubSystems(system)
 % closeSubSystems(model)
 %   Close all open subsystems. Sometimes when opening a model from someone
 %   else (or yourself) Simulink will re-open all of the previously opened
@@ -20,3 +20,5 @@ end
 nonRoot=~strcmp(get(blocks,'Name'),get(blocks,'Path'));
 % Close the systems.
 close_system(blocks(nonRoot));
+
+closedSubsystems = any(nonRoot);

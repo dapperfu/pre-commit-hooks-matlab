@@ -20,7 +20,7 @@ run('close_simulink_subsystems');
 exit;
 """, file=fid)
 
-    subprocess.run(["matlab", "-wait", "-r", "run_close_simulink_subsystems"])
+    subprocess.run(["matlab", "-batch", "run_close_simulink_subsystems"])
 
     if not DEBUG:
         os.unlink("models.txt")
