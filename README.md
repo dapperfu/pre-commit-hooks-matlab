@@ -55,11 +55,11 @@ Hooks to be implemented.
 Checkout to somewhere in your workspace.
 
 ```
-```git clone https://github.com/dapperfu/pre-commit-hooks-matlab.git```
+git clone https://github.com/dapperfu/pre-commit-hooks-matlab.git
 
 cd <your project>
 
-pre-commit try-repo ../pre-commit-hooks-matlab --all-files --verbose```
+pre-commit try-repo ../pre-commit-hooks-matlab --all-files --verbose
 ```
 
 `pre-commit`` will run and check your Project repository for m-files and Simulink Models.
