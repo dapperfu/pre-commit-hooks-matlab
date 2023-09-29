@@ -28,6 +28,7 @@ addpath('{moduleDir}');
 addpath('{os.path.join(moduleDir, "TidyCode")}');
 
 run('{moduleScript}');
+quit(0, 'force');
 """,
             file=fid,
         )
@@ -40,8 +41,6 @@ run('{moduleScript}');
     if not DEBUG:
         os.unlink(fileList)
         os.unlink(runScript)
-
-    sys.exit(status)
 
 
 if __name__ == "__main__":

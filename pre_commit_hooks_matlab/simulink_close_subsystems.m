@@ -1,5 +1,6 @@
-function close_simulink_subsystems()
+function simulink_close_subsystems()
 %%
+
 fid = fopen('models.txt', 'r');
 
 while ~feof(fid)
@@ -22,14 +23,14 @@ while ~feof(fid)
     end
 
     % Close all non-root subsystem tabs.
-    blocks=find_system(system,'MatchFilter',@Simulink.match.allVariants, ...
+    openSystems=find_system(bdroot,'MatchFilter',@Simulink.match.allVariants, ...
         'FindAll','on','LookUnderMasks','all',...
         'FollowLinks','on','Open','on');
-    blocks=reshape(blocks,1,numel(blocks));
+    openSystems=reshape(openSystems,1,numel(openSystems));
     % Find which models aren't root.
-    nonRoot=~strcmp(get(blocks,'Name'),get(blocks,'Path'));
+    nonRoot=~strcmp(get(openSystems,'Name'),get(openSystems,'Path'));
     % Close the systems.
-    close_system(blocks(nonRoot));
+    close_system(openSystems(nonRoot));
     % If any non-root subsystems were closed, save the file.
     if any(nonRoot)
         doSave = true;

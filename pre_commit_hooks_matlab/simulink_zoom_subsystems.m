@@ -1,5 +1,4 @@
-% function simulink_zoom_subsystems()
-
+function simulink_zoom_subsystems()
 %%
 
 % Open the list of models passed from pre-commit and corresponding Python

@@ -1,4 +1,4 @@
-function matlab_smart_indent()
+function matlab_justify()
 %%
 fid = fopen('mfiles.txt', 'r');
 
