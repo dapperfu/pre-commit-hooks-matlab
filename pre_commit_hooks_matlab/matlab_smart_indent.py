@@ -39,8 +39,9 @@ quit(0, 'force');
         status = subprocess.check_output(["matlab", "-batch", runScript])
 
     if not DEBUG:
-        os.unlink(fileList)
-        os.unlink(runScript)
+        os.unlink(fileList)        
+        os.unlink(f"{runScript}.log")
+        os.unlink(f"{runScript}.m")
 
 
 if __name__ == "__main__":

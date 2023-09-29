@@ -41,7 +41,8 @@ quit(0, 'force');
 
     if not DEBUG:
         os.unlink(fileList)
-        os.unlink(runScript)
+        os.unlink(f"{runScript}.log")
+        os.unlink(f"{runScript}.m")
 
 
 if __name__ == "__main__":
