@@ -1,0 +1,3 @@
+[submodule "pre_commit_hooks_matlab/TidyCode"]
+	path = pre_commit_hooks_matlab/TidyCode
+	url = https://github.com/okomarov/TidyCode.git
