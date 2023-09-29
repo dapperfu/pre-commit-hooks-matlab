@@ -11,7 +11,7 @@ DEBUG = True
 fileList = "models.txt"
 moduleDir = os.path.dirname(os.path.realpath(__file__))
 moduleScript = Path(__file__).stem
-runScript = f"run_{moduleScript}.m"
+runScript = f"run_{moduleScript}"
 
 
 def main(argv: List[str] = sys.argv):
