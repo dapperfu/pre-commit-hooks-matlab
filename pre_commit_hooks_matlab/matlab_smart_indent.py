@@ -2,13 +2,15 @@ import os
 import subprocess
 import sys
 from typing import List
+from pathlib import Path
+
 
 # Debugging.
 DEBUG = True
 # Setup.
 fileList = "mfiles.txt"
 moduleDir = os.path.dirname(os.path.realpath(__file__))
-moduleScript = {Path(__file__).stem}
+moduleScript = Path(__file__).stem
 runScript = f"run_{moduleScript}.m"
 
 
@@ -37,7 +39,7 @@ quit(1, 'force');
         status = subprocess.check_output(["matlab", "-batch", runScript])
 
     if not DEBUG:
-        os.unlink("mfiles.txt")
+        os.unlink(fileList)
         os.unlink(runScript)
 
     sys.exit(status)

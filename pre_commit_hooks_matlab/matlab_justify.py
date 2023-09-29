@@ -2,13 +2,15 @@ import os
 import subprocess
 import sys
 from typing import List
+from pathlib import Path
+
 
 # Debugging.
 DEBUG = True
 # Setup.
 fileList = "mfiles.txt"
 moduleDir = os.path.dirname(os.path.realpath(__file__))
-moduleScript = {Path(__file__).stem}
+moduleScript = Path(__file__).stem
 runScript = f"run_{moduleScript}.m"
 
 
