@@ -1,6 +1,6 @@
 % function simulink_zoom_subsystems()
 
-%% 
+%%
 
 % Open the list of models passed from pre-commit and corresponding Python
 % file.
@@ -38,10 +38,10 @@ while ~feof(fid)
     end
 
     open_system(currentSystem);
-    
+
     if doSave
         % Only save the Simulink model if something has changed.
-        % Re-saving an unchanged model changes a few parameters 
+        % Re-saving an unchanged model changes a few parameters
         % (LastModifiedDate & RTWModifiedTimeStamp) that cause
         % pre-commit to fail as it sees a file change even if nothing has
         % changed in the model itself.
