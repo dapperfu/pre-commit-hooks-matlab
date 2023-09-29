@@ -1,7 +1,6 @@
 import os
 import subprocess
 import sys
-from pathlib import Path
 from typing import List
 
 # Debugging.
@@ -9,12 +8,12 @@ DEBUG = True
 # Setup.
 fileList = "mfiles.txt"
 moduleDir = os.path.dirname(os.path.realpath(__file__))
-moduleScript = {Path(__file__).stem}.m
-runScript = f"run_{moduleScript}"
+moduleScript = {Path(__file__).stem}
+runScript = f"run_{moduleScript}.m"
 
 
 def main(argv: List[str] = sys.argv):
-    with open("mfiles.txt", "w") as fid:
+    with open(fileList, "w") as fid:
         for mfile in argv[1:]:
             full_path = os.path.abspath(mfile)
             print(full_path, file=fid)
@@ -40,6 +39,8 @@ quit(1, 'force');
     if not DEBUG:
         os.unlink("mfiles.txt")
         os.unlink(runScript)
+
+    sys.exit(status)
 
 
 if __name__ == "__main__":
