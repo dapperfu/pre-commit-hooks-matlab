@@ -28,13 +28,12 @@ addpath('{moduleDir}');
 addpath('{os.path.join(moduleDir, "TidyCode")}');
 
 run('{moduleScript}');
-quit(1, 'force');
 """,
             file=fid,
         )
 
     if DEBUG:
-        status = subprocess.check_output(["matlab", "-wait", "-r", runScript])
+        status = subprocess.check_output(["matlab", "-logfile", f"{runScript}.log", "-nosplash", "-wait", "-r", runScript])
     else:
         status = subprocess.check_output(["matlab", "-batch", runScript])
 

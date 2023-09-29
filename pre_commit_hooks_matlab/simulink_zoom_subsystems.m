@@ -36,7 +36,7 @@ while ~feof(fid)
             disp(zoomAfter)
         end
     end
-
+    % Open the model back to the subsystem it was when opened (shuold be `bdroot`)
     open_system(currentSystem);
 
     if doSave

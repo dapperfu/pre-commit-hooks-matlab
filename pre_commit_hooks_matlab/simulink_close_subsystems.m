@@ -30,7 +30,7 @@ while ~feof(fid)
     nonRoot=~strcmp(get(blocks,'Name'),get(blocks,'Path'));
     % Close the systems.
     close_system(blocks(nonRoot));
-
+    % If any non-root subsystems were closed, save the file.
     if any(nonRoot)
         doSave = true;
     end
